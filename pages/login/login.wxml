@@ -1,0 +1,38 @@
+<view class="index_model">
+      <view class='carousel'> 
+        <swiper class='carousel_swiper' indicator-dots="true" indicator-color="#f4f4f4" indicator-active-color="#4eb8b8" autoplay="true" interval='5000' circular='true'>
+          <block wx:for="{{carouselList}}" wx:key="key">
+            <swiper-item bindtap='chomeCarouselClick' data-url='{{item.url}}'>
+              <image class="carouselImg" src='{{item.img}}' mode='aspectFill' ></image>
+              <!-- <image class="carouselImg" src='{{host}}{{item.img}}' mode='aspectFill' ></image> -->
+            </swiper-item>
+          </block>
+        </swiper>
+      </view>
+      <view >
+            <view class="message">
+              <view class="message_index">
+              <image class="message_img" src='http://img95.699pic.com/element/40145/8026.png_300.png!/clip/0x300a0a0' mode='aspectFill' ></image>
+                <view class="message_content">
+                  这是一段消息通知内容！
+                </view>
+              </view>
+            </view>
+      </view>
+      <h4><span style="color:#3DEE11;margin-left:10px;">热门课程</span></h4>
+</view>
+<scroll-view style="position:absolute;top:550rpx;width:100%;height: {{scrollViewHeight}}px" scroll-y="true">
+  <view class="pro_info">
+    <image style="width:32%;height:120px" src="./img/1.jpeg"></image>
+    <view style="width:56%;height:120px">1111111</view>
+    <view style="width:12%;height:120px"><button type="default" class="btn_saling_index" size="mini">出售中</button></view>
+  </view>
+  <view class="pro_info">
+    <image style="width:32%;height:120px" src="./img/2.jpg"></image><view>22222222</view>
+    <view><button type="default" class="btn_saling_index" size="mini">出售中</button></view>
+  </view>
+  <view class="pro_info">
+    <image style="width:32%;height:120px" src="./img/1.jpeg"></image><view>3333333333</view>
+    <view><button type="default" class="btn_saling_index" size="mini">出售中</button></view>
+  </view>
+</scroll-view>
